@@ -5,13 +5,17 @@ using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Net.Http.Formatting;
+using Newtonsoft.Json.Linq;
+using System.Xml;
+using System.Web;
 
 namespace PersonalWebService
 {
     [ServiceContract(Namespace = "")]
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
-    public class HelloWorldWebService
-    {
+    public class WebServiceManager
+    { 
         #region Members
 
         private static readonly DatabaseManager dbManager = new DatabaseManager();
@@ -28,53 +32,44 @@ namespace PersonalWebService
 
         // GET
         [WebGet(UriTemplate = "/GetTestData")]
-        public String GetTestData()
+        public string GetTestData()
         {
             return dbManager.GetTestData();
         }
 
         // GET
         [WebGet(UriTemplate = "/VisualStudioBlog")]
-        public String GetVisualStudioBlogFeed()
+        public string GetVisualStudioBlog()
         {
             const string URL = "https://devblogs.microsoft.com/visualstudio/feed/";
-            string urlParameters = "";
 
             HttpClient client = new HttpClient();            
             client.BaseAddress = new Uri(URL);
 
-            // Add an Accept header for JSON format.
+            // Add an Accept header for rss+xml format - unnecessary but could be useful in future for accepting different response formats
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/rss+xml"));
 
-            // List data response.
-            HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-            if (response.IsSuccessStatusCode)
+            HttpResponseMessage response;
+                        
+            // Error Handling
+            try
             {
-                // Parse the response body
-                var dataObjects = response.Content.ReadAsStringAsync().Result;  //Make sure to add a reference to System.Net.Http.Formatting.dll
-                foreach (var d in dataObjects)
-                {
-                    Console.WriteLine("{0}", d);
-                }
+                // List data response
+                response = client.GetAsync("").Result;
             }
-            else
+            catch(Exception err)
             {
-                Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
+                return err.Message;
             }
 
-            //Make any other calls using HttpClient here.
-
-            //Dispose once all HttpClient calls are complete. This is not necessary if the containing object will be disposed of; for example in this case the HttpClient instance will be disposed automatically when the application terminates so the following call is superfluous.
-            client.Dispose();
-
-            return "";
+            return XMLParser.ParseVisualStudioBlogResponse(response);
         }
 
         #endregion
 
         #region TutorialMembers
 
-        private static List<string> list = new List<string>(new String[] { "Arrays", "Queues", "Stacks" });
+        private static List<string> list = new List<string>(new string[] { "Arrays", "Queues", "Stacks" });
 
         #endregion
 
@@ -82,7 +77,7 @@ namespace PersonalWebService
 
         // GET
         [WebGet(UriTemplate="/Tutorial")]
-        public String GetAllTutorials()
+        public string GetAllTutorials()
         {
             int count = list.Count;
             String TutorialList = "";
@@ -93,7 +88,7 @@ namespace PersonalWebService
 
         // GET
         [WebGet(UriTemplate="/Tutorial/{Tutorialid}")]
-        public String GetTutorialByID(String Tutorialid)
+        public string GetTutorialByID(String Tutorialid)
         {
             int pid;
             Int32.TryParse(Tutorialid, out pid);
