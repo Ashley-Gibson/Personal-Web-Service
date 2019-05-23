@@ -90,19 +90,14 @@ C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\Personal
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.IO.Compression.ZipFile.dll
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.IO.FileSystem.dll
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.IO.Pipes.AccessControl.dll
-C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.IO.Pipes.dll
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.Net.Http.dll
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.Net.Sockets.dll
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.Reflection.Metadata.dll
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.Security.AccessControl.dll
-C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.Security.Claims.dll
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.Security.Cryptography.Algorithms.dll
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.Security.Cryptography.Encoding.dll
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.Security.Cryptography.Primitives.dll
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.Security.Principal.Windows.dll
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.Text.Encoding.CodePages.dll
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.Threading.Tasks.Extensions.dll
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\roslyn\System.ValueTuple.dll
@@ -118,3 +113,7 @@ C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\Personal
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\obj\Debug\PersonalWebService.csproj.CopyComplete
+C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\Newtonsoft.Json.dll
+C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\System.Net.Http.Formatting.dll
+C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\Newtonsoft.Json.xml
+C:\Users\Ash\OneDrive\Portfolio\Personal-Web-Service\PersonalWebService\PersonalWebService\bin\System.Net.Http.Formatting.xml
