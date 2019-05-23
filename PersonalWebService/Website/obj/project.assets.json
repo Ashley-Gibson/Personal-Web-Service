@@ -4333,6 +4333,15 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "PersonalWebService/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/PersonalWebService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PersonalWebService.dll": {}
+        }
       }
     }
   },
@@ -11793,13 +11802,19 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "PersonalWebService/1.0.0": {
+      "type": "project",
+      "path": "../PersonalWebService/PersonalWebService.csproj",
+      "msbuildProject": "../PersonalWebService/PersonalWebService.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "PersonalWebService >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11809,11 +11824,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ash\\OneDrive\\Portfolio\\Personal-Web-Service\\PersonalWebService\\Website\\Website.csproj",
+      "projectUniqueName": "C:\\Users\\Ash\\Desktop\\Personal-Web-Service\\PersonalWebService\\Website\\Website.csproj",
       "projectName": "Website",
-      "projectPath": "C:\\Users\\Ash\\OneDrive\\Portfolio\\Personal-Web-Service\\PersonalWebService\\Website\\Website.csproj",
+      "projectPath": "C:\\Users\\Ash\\Desktop\\Personal-Web-Service\\PersonalWebService\\Website\\Website.csproj",
       "packagesPath": "C:\\Users\\Ash\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ash\\OneDrive\\Portfolio\\Personal-Web-Service\\PersonalWebService\\Website\\obj\\",
+      "outputPath": "C:\\Users\\Ash\\Desktop\\Personal-Web-Service\\PersonalWebService\\Website\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11831,7 +11846,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Ash\\Desktop\\Personal-Web-Service\\PersonalWebService\\PersonalWebService\\PersonalWebService.csproj": {
+              "projectPath": "C:\\Users\\Ash\\Desktop\\Personal-Web-Service\\PersonalWebService\\PersonalWebService\\PersonalWebService.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

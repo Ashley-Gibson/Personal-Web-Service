@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Xml;
 
@@ -65,7 +66,7 @@ namespace PersonalWebService
                                 temp.link = element.InnerText;
                                 break;
                             case "pubDate":
-                                temp.pubDate = element.InnerText;
+                                temp.pubDate = ConvertToShortDate(element.InnerText);
                                 break;
                             case "dc:creator":
                                 temp.creator = element.InnerText;
@@ -95,6 +96,16 @@ namespace PersonalWebService
             }
 
             return ResponseFormatter.FormatVisualStudioBlogResponse(itemList);
+        }
+
+        // Change Short Date functionality here
+        private static string ConvertToShortDate(string longDate)
+        {
+            DateTime convertedDate = Convert.ToDateTime(longDate);
+
+            string shortDate = convertedDate.ToShortDateString() + " " + convertedDate.ToShortTimeString();
+
+            return shortDate;
         }
     }
 }

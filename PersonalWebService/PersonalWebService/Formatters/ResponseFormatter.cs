@@ -10,15 +10,12 @@ namespace PersonalWebService
 
             foreach (var item in parsedResponse)
             {
-                // Format Parsed XML
-                html += item.title + "\n" 
-                    + item.link + "\n"
-                    + item.pubDate + "\n"
-                    + item.creator + "\n"
-                    + item.category + "\n"
-                    + item.description + "\n"
-                    + item.encodedContent + "\n"
-                    + item.other + "\n\n\n";           
+                // Format Parsed XML - Per Blog Post
+                html += "<h4>" + "<a href=\"" + item.link + "\" target=\"_blank\">" + item.title + "</a></h4>"
+                    + "Published:<b> " + item.pubDate + "</b><br />"
+                    + "Author:<b> " + item.creator + "</b>" + "<br />"
+                    + "Category:<b> " + item.category + "</b><br /><br />"
+                    + item.description + "<br />";                    
             }
 
             return html;
