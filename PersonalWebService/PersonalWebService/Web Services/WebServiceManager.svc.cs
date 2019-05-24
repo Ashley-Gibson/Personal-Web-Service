@@ -39,7 +39,7 @@ namespace PersonalWebService
 
         // GET
         [WebGet(UriTemplate = "/VisualStudioBlog")]
-        public string GetVisualStudioBlog()
+        public string VSBlog_GetRequest()
         {
             const string URL = "https://devblogs.microsoft.com/visualstudio/feed/";
 

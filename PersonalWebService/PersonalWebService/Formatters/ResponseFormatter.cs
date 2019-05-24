@@ -4,7 +4,7 @@ namespace PersonalWebService
 {
     public class ResponseFormatter
     {
-        public static string FormatVisualStudioBlogResponse(List<XMLParser.Item> parsedResponse)
+        public static string VSBlog_FormatResponse(List<XMLParser.VSBlog_Item> parsedResponse)
         {
             string html = "";
 

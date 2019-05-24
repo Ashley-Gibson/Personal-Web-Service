@@ -7,7 +7,7 @@ namespace PersonalWebService
 {
     public class XMLParser
     {
-        public struct Item
+        public struct VSBlog_Item
         {
             public string title;
             public string link;
@@ -26,7 +26,7 @@ namespace PersonalWebService
             XmlDocument xml = new XmlDocument();
             string parsedResponse = "";
 
-            List<Item> itemList = new List<Item>();
+            List<VSBlog_Item> itemList = new List<VSBlog_Item>();
 
             if (response.IsSuccessStatusCode)
             {
@@ -34,25 +34,12 @@ namespace PersonalWebService
                 xml.LoadXml(response.Content.ReadAsStringAsync().Result);
 
                 // Extract XML Element Types
-                XmlNodeList items = xml.SelectNodes("/rss/channel/item");
-
-                /*
-                
-                /rss/channel/item/title
-                /rss/channel/item/link
-                /rss/channel/item/comments
-                /rss/channel/item/pubDate
-                /rss/channel/item/dc:creator
-                /rss/channel/item/category
-                /rss/channel/item/description
-                /rss/channel/item/content:encoded
-
-                */               
+                XmlNodeList items = xml.SelectNodes("/rss/channel/item");             
                 
                 // Load data into XML items first
                 foreach (XmlNode item in items)
                 {
-                    Item temp = new Item();
+                    VSBlog_Item temp = new VSBlog_Item();
 
                     foreach (XmlElement element in item)
                     {
@@ -95,7 +82,7 @@ namespace PersonalWebService
                 parsedResponse = "Error: {0} ({1})" + (int)response.StatusCode + response.ReasonPhrase;
             }
 
-            return ResponseFormatter.FormatVisualStudioBlogResponse(itemList);
+            return ResponseFormatter.VSBlog_FormatResponse(itemList);
         }
 
         // Change Short Date functionality here

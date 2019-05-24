@@ -11,7 +11,7 @@ namespace Website.Controllers
         {
             WebServiceManager webServiceManager = new WebServiceManager();
 
-            ViewData["VisualStudioBlogHtml"] = webServiceManager.GetVisualStudioBlog();
+            ViewData["VisualStudioBlogHtml"] = webServiceManager.VSBlog_GetRequest();
 
             return View();
         }
