@@ -31,14 +31,14 @@ namespace PersonalWebService
         #region Methods
 
         // GET
-        [WebGet(UriTemplate = "/GetTestData")]
+        [WebGet(UriTemplate = "/GetPersonalDatabaseTestData")]
         public string GetTestData()
         {
             return dbManager.GetTestData();
         }
 
         // GET
-        [WebGet(UriTemplate = "/VisualStudioBlog")]
+        [WebGet(UriTemplate = "/GetVisualStudioBlog")]
         public string VSBlog_GetRequest()
         {
             const string URL = "https://devblogs.microsoft.com/visualstudio/feed/";
