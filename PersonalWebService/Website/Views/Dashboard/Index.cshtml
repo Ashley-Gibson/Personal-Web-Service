@@ -34,7 +34,7 @@
 <div class="col-md-12 visualStudioBlog">
     <div class="visualStudioBlog-header">
         <div class="visualStudioBlog-header-close">
-            <a href="javascript:void(0)"><span class="glyphicon glyphicon-remove"></span></a>
+            <a href="javascript:void(0)" onclick="togglePanel('visualStudioBlog')"><span class="glyphicon glyphiconvisualStudioBlog glyphicon-remove"></span></a>
         </div>
         <div class="visualStudioBlog-header-title">
             Visual Studio Developers Blog
@@ -42,5 +42,19 @@
     </div>
     <div class="visualStudioBlog-body">
         @Html.Raw(ViewData["VisualStudioBlogHtml"])
+    </div>
+</div>
+
+<div class="col-md-12 googleDevsBlog">
+    <div class="googleDevsBlog-header">
+        <div class="googleDevsBlog-header-close">
+            <a href="javascript:void(0)" onclick="togglePanel('googleDevsBlog')"><span class="glyphicon glyphicongoogleDevsBlog glyphicon-remove"></span></a>
+        </div>
+        <div class="googleDevsBlog-header-title">
+            Google Developers Blog
+        </div>
+    </div>
+    <div class="googleDevsBlog-body">
+        @Html.Raw(ViewData["GoogleDevsBlogHtml"])
     </div>
 </div>

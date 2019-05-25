@@ -20,5 +20,20 @@ namespace PersonalWebService
 
             return html;
         }
+
+        public static string GDBlog_FormatResponse(List<XMLParser.GDBlog_Item> parsedResponse)
+        {
+            string html = "";
+
+            foreach (var item in parsedResponse)
+            {
+                // Format Parsed XML - Per Blog Post
+                html += "<h4>" + "<a href=\"" + item.link + "\" target=\"_blank\">" + item.title + "</a></h4>"
+                    + "Published:<b> " + item.published + "</b><br />"
+                    + "Author: <b> " + item.author + "</b>" + "<br />";
+            }
+
+            return html;
+        }        
     }
 }

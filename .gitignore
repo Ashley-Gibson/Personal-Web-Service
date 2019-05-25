@@ -47,3 +47,4 @@ PersonalWebService/Website/bin/Debug/netcoreapp2.1/PersonalWebService.pdb
 PersonalWebService/Website/bin/Debug/netcoreapp2.1/PersonalWebService.dll.config
 PersonalWebService/Website/obj/Debug/netcoreapp2.1/Razor/Views/Dashboard/Index.g.cshtml.cs
 PersonalWebService/.vs/PersonalWebService/v16/Server/sqlite3/db.lock
+PersonalWebService/.vs/PersonalWebService/DesignTimeBuild/.dtbcache

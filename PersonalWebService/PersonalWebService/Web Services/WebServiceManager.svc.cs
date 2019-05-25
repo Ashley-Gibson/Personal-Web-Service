@@ -38,32 +38,42 @@ namespace PersonalWebService
         }
 
         // GET
-        [WebGet(UriTemplate = "/GetVisualStudioBlog")]
-        public string VSBlog_GetRequest()
+        [WebGet(UriTemplate = "/GetBlog")]
+        public string Blog_GetRequest(string URL, string blogName)
         {
-            const string URL = "https://devblogs.microsoft.com/visualstudio/feed/";
-
-            HttpClient client = new HttpClient();            
-            client.BaseAddress = new Uri(URL);
+            HttpClient client = new HttpClient
+            {
+                BaseAddress = new Uri(URL)
+            };
 
             // Add an Accept header for rss+xml format - unnecessary but could be useful in future for accepting different response formats
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/rss+xml"));
 
             HttpResponseMessage response;
-                        
+
             // Error Handling
             try
             {
                 // List data response
                 response = client.GetAsync("").Result;
             }
-            catch(Exception err)
+            catch (Exception err)
             {
                 return err.Message;
             }
 
-            return XMLParser.ParseVisualStudioBlogResponse(response);
+            // Determine Blog to Parse
+            switch(blogName)
+            {
+                case "VisualStudio":
+                    return XMLParser.ParseVisualStudioBlogResponse(response);
+                case "GoogleDevelopers":
+                    return XMLParser.ParseGoogleDevsBlogResponse(response);
+            }
+
+            return null;
         }
+        
 
         #endregion
 

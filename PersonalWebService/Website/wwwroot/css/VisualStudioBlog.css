@@ -11,6 +11,7 @@
     border-color:grey;
     padding:0 !important;
     align-items:flex-end;
+    transition: 0.5s;
 }
 
 .visualStudioBlog-header {
