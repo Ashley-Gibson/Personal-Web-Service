@@ -3,7 +3,7 @@ function togglePanel(panelName) {
     var panelElement = document.getElementsByClassName(panelName)[0];
     var glyphIcon = document.getElementsByClassName('glyphicon' + panelName)[0];
 
-    if (panelElement.style.height > 0) {
+    if (parseInt(panelElement.style.height) > 30) {
         glyphIcon.classList.remove('glyphicon-remove');
         glyphIcon.classList.add('glyphicon-plus');
         panelElement.style.height = "30%";
