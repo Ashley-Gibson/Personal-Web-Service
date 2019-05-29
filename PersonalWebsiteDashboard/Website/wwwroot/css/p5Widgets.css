@@ -1,11 +1,18 @@
-﻿canvas {
-    position: fixed !important;
-    left: 50% !important;
-    top: 50% !important;
-    display: block !important;
+﻿.dashboardContainer {
+    padding-top: 5%;
 }
 
 .widgetContainer {
     height: 300px;
-    background-color: #2E3442 !important;
+    background-color: #2E3442;
+    border-radius:5%;      
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+
+.gaugeWidget{
+    margin-left:30%;
+    margin-right:30%;
+    margin-top:40%;
+    margin-bottom:40%;
 }

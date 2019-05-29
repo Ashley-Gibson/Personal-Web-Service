@@ -8,10 +8,12 @@ function togglePanel(panelName) {
         glyphIcon.classList.remove('glyphicon-plus');
         glyphIcon.classList.add('glyphicon-remove');
         panelElement.style.height = "30%";       
+        panelElement.style.overflowY = 'scroll';
     }
     else {
         glyphIcon.classList.remove('glyphicon-remove');
         glyphIcon.classList.add('glyphicon-plus');
-        panelElement.style.height = "30px";
+        panelElement.style.height = "33px";
+        panelElement.style.overflow = 'hidden';
     }
 }
