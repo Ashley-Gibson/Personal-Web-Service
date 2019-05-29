@@ -1,37 +1,53 @@
-﻿// Global Variables
-let progressX = 16.5;
-let progressY = 40;
+﻿// Declare Progress Coords
+let x;
+let y;
+
+// Percent that the value display should go to
+let pct = 50;
+
+// Progress Percentage
+let pctProgress = 0.0;
+
+// Percent Total
+let percentTotal = (3.1 / 100) * pct;
+
+// Update Amount
+let speed = 0.04;
+
+// Radius of Circle
+let r = 33;
 
 function setup() {
     createCanvas(100, 40);
-
+    pixelDensity(2);
     drawEmptyCurvedTube();
-
-    frameRate(30);
 }
 
 function draw() {
-    updateProgress(progressX, progressY);
 
-    progressX = progressX + 0.1;
-    progressY = progressY - 0.1;
+    pctProgress += speed;
+
+    if (pctProgress < percentTotal) {
+        x = -r * cos(pctProgress) + 50;
+        y = -r * sin(pctProgress) + 50;
+    }
+
+    fill("blue");
+    stroke("blue");
+    strokeWeight(5);
+    smooth();
+    circle(x, y, 20, 20);
 }
 
 function drawEmptyCurvedTube() {
+    // Grey Background
+    background(211);
+
     // Semi Circle
     noFill();
-    stroke("black");
-    ellipse(50, 40, 90, 70);
+    stroke("blue");
+    circle(50, 50, 90, 70);
 
     // Hole in Semi Circle
-    fill("white");
-    stroke("black");
-    ellipse(50, 40, 45, 35);
-}
-
-function updateProgress(progressX, progressY) {
-    // Draw First Circle to start loading animation progress
-    fill("black");
-    noStroke();
-    ellipse(progressX, progressY, 20, 20);
+    circle(50, 50, 45, 35);
 }
