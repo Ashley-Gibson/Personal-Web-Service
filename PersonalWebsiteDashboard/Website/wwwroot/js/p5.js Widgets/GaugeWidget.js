@@ -41,7 +41,7 @@ function draw() {
 
 function drawEmptyCurvedTube() {
     // Grey Background
-    background(211);
+    //background(211);
 
     // Semi Circle
     noFill();
