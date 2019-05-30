@@ -2,3 +2,19 @@
     background-color: #141821;
     color:lightgrey;
 }
+
+.customContainer {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dashboardContainer {
+    padding-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

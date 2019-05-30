@@ -1,6 +1,4 @@
-﻿.dashboardContainer {
-    padding-top: 5%;
-}
+﻿
 
 .widgetContainer {
     height: 300px;
@@ -13,6 +11,13 @@
 .gaugeWidget{
     margin-left:30%;
     margin-right:30%;
-    margin-top:40%;
-    margin-bottom:40%;
+    margin-top:30%;
+    margin-bottom:30%;
+}
+
+.nestedCirclesWidget{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20%;
+    margin-bottom: 20%;
 }
