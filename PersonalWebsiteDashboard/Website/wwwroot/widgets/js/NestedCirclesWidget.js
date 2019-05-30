@@ -60,11 +60,7 @@ let outerPercentTotal = (3.1 / 100) * outerPct;
 let outerRadius = 55;
 
 function setup() {
-    let canvas = createCanvas(140, 140);
-
-    // Move the canvas so it’s inside the widget container
-    canvas.parent('widgetTwo');
-    canvas.class('nestedCirclesWidget');
+    canvas = createCanvas(140, 140);
 
     pixelDensity(2);
     smooth();

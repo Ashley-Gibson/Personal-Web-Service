@@ -12,9 +12,18 @@
 
 .dashboardContainer {
     padding-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    vertical-align:middle;
+}
+
+.widgetContainer {
+    height: 300px;
+    background-color: #2E3442;
+    border-radius: 5%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+canvas {
+    overflow: hidden;
 }

@@ -1,21 +1,7 @@
-﻿.widgetContainer {
-    height: 300px;
-    background-color: #2E3442;
-    border-radius:5%;      
-    padding-left:0 !important;
-    padding-right:0 !important;
-}
-
-.gaugeWidget{
-    margin-left:30%;
-    margin-right:30%;
+﻿.gaugeWidget{
     margin-top:30%;
-    margin-bottom:30%;
 }
 
-.nestedCirclesWidget{
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 20%;
-    margin-bottom: 20%;
+.nestedCirclesWidget {
+    margin-top:20%;
 }

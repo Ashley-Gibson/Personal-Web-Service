@@ -18,11 +18,7 @@ let speed = 0.02;
 let r = 33;
 
 function setup() {
-    let canvas = createCanvas(100, 40);
-
-    // Move the canvas so it’s inside the widget container
-    canvas.parent('widgetOne');
-    canvas.class('gaugeWidget');
+    canvas = createCanvas(100, 40);
 
     pixelDensity(2);
     drawEmptyCurvedTube();
