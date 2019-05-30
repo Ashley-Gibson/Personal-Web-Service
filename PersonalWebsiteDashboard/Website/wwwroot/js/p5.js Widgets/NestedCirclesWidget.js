@@ -1,7 +1,7 @@
 ﻿/* GLOBAL */
 
 // Update Amount
-let speed = 0.02;
+speed = 0.02;
 // Circle Fill Colour
 let fillColour = "";
 
@@ -60,7 +60,7 @@ let outerPercentTotal = (3.1 / 100) * outerPct;
 let outerRadius = 55;
 
 function setup() {
-    let canvas = createCanvas(200, 200);
+    let canvas = createCanvas(140, 140);
 
     // Move the canvas so it’s inside the widget container
     canvas.parent('widgetTwo');
@@ -89,8 +89,8 @@ function innerCircle() {
     innerPctProgress += speed;
 
     if (innerPctProgress < innerPercentTotal) {
-        innerX = -innerRadius * cos(innerPctProgress) + 200;
-        innerY = -innerRadius * sin(innerPctProgress) + 200;
+        innerX = -innerRadius * cos(innerPctProgress) + 70;
+        innerY = -innerRadius * sin(innerPctProgress) + 70;
     }
 
     fill(fillColour);
@@ -104,8 +104,8 @@ function middleCircle() {
     middlePctProgress += speed;
 
     if (middlePctProgress < middlePercentTotal) {
-        middleX = -middleRadius * cos(middlePctProgress) + 200;
-        middleY = -middleRadius * sin(middlePctProgress) + 200;
+        middleX = -middleRadius * cos(middlePctProgress) + 70;
+        middleY = -middleRadius * sin(middlePctProgress) + 70;
     }
 
     fill(fillColour);
@@ -119,8 +119,8 @@ function outerCircle() {
     outerPctProgress += speed;
 
     if (outerPctProgress < outerPercentTotal) {
-        outerX = -outerRadius * cos(outerPctProgress) + 200;
-        outerY = -outerRadius * sin(outerPctProgress) + 200;
+        outerX = -outerRadius * cos(outerPctProgress) + 70;
+        outerY = -outerRadius * sin(outerPctProgress) + 70;
     }
 
     fill(fillColour);
@@ -135,9 +135,9 @@ function drawInitialCircles() {
     smooth();
 
     //Inner Circle
-    circle(200, 200, 50, 50);
+    circle(70, 70, 50, 50);
     // Middle Circle
-    circle(200, 200, 80, 80);
+    circle(70, 70, 80, 80);
     // Outer Circle
-    circle(200, 200, 110, 110);
+    circle(70, 70, 110, 110);
 }
