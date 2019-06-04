@@ -27,13 +27,3 @@
 canvas {
     overflow: hidden;
 }
-
-/* Overriding Bootstrap */
-
-.navbar-header{
-    padding:0 !important;
-}
-
-.navbar-brand {
-    float:right !important;
-}
