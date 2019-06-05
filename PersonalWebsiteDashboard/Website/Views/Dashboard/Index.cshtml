@@ -4,31 +4,37 @@
 
 <div class="row">
     <div class="col-md-12 dashboardContainer">
-        <div class="col-md-2 widgetOne">
-            Value 1:
+        <div class="col-md-3 widgetContainer widgetOne" id="widgetOne">
+            <iframe class="gaugeWidget"
+                    src="~/widgets/html/GaugeWidget.html"
+                    width="120"
+                    height="60"
+                    scrolling="no"
+                    frameborder="0"></iframe>
         </div>
-        <div class="col-md-2 horizontalSpacer">
 
-        </div>
-        <div class="col-md-2 widgetTwo">
-            Value 2:
-        </div>
-        <div class="col-md-2 horizontalSpacer">
+        <div class="col-md-1 horizontalSpacer"></div>
 
+        <div class="col-md-3 widgetContainer widgetTwo" id="widgetTwo">
+            <iframe class="nestedCirclesWidget"
+                    src="~/widgets/html/NestedCirclesWidget.html"
+                    width="160"
+                    height="160"
+                    scrolling="no"
+                    frameborder="0"></iframe>
         </div>
-        <div class="col-md-2 widgetThree">
-            Value 3:
+
+        <div class="col-md-1 horizontalSpacer"></div>
+
+        <div class="col-md-3 widgetContainer widgetThree" id="widgetThree">
+            <iframe class="pieChartWidget"
+                    src="~/widgets/html/PieChartWidget.html"
+                    width="180"
+                    height="180"
+                    scrolling="no"
+                    frameborder="0"></iframe>
         </div>
     </div>
-</div>
-
-<div class="row">
-    <br />
-    <br />
-</div>
-
-<div class="row">
-
 </div>
 
 <div class="col-md-12 visualStudioBlog">
