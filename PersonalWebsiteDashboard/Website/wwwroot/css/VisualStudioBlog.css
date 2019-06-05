@@ -15,13 +15,15 @@
 }
 
 .visualStudioBlog-header {
-    width:24.9%;
+    width: 24.9%;
     height: 30px;
-    position:fixed;
+    position: fixed;
     border-width: 3px;
-    border-bottom-style:solid;
+    border-bottom-style: solid;
+    border-right-style: solid;
     border-color: grey;
-    display:flex;
+    display: flex;
+    background: #141821;
 }
 
 .visualStudioBlog-header-close {

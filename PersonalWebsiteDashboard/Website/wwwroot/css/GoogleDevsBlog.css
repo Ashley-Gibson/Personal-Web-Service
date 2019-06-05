@@ -20,8 +20,10 @@
     position: fixed;
     border-width: 3px;
     border-bottom-style: solid;
+    border-right-style:solid;
     border-color: grey;
     display: flex;
+    background: #141821;
 }
 
 .googleDevsBlog-header-close {
@@ -32,7 +34,7 @@
 }
 
 .googleDevsBlog-header-title {
-    width: 95%;
+    width: 100%;
     font-size: 20px;
     text-align: center;
     font-family: Courier New, Courier, monospace;
