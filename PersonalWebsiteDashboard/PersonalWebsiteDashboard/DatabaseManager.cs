@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Configuration;
+
 using System.Data.SqlClient;
 
 namespace PersonalWebsiteDashboard
@@ -8,7 +8,7 @@ namespace PersonalWebsiteDashboard
     {
         #region Members
 
-        private readonly string _databaseConnectionString = ConfigurationManager.ConnectionStrings["WebServiceDataConnectionString"].ConnectionString;
+        private readonly string _databaseConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["WebServiceDataConnectionString"].ConnectionString;
 
         private string testOutputString = "";
         private const string outputStringValidator = "hello";
@@ -19,12 +19,12 @@ namespace PersonalWebsiteDashboard
 
         public string GetDatabaseConnectionString()
         {
-            return _databaseConnectionString;
+            return "";
         }
         
         public bool TestConnectionString()
         {
-            SqlConnection sqlConnection = new SqlConnection(_databaseConnectionString);
+            SqlConnection sqlConnection = new SqlConnection("");
 
             try
             {
@@ -45,11 +45,11 @@ namespace PersonalWebsiteDashboard
 
         public string GetTestData()
         {
-            SqlConnection sqlConnection = new SqlConnection(_databaseConnectionString);
+            SqlConnection sqlConnection = new SqlConnection("");
 
             try
             {
-                string sqlCommandText = "SELECT * FROM TestTable";
+                string sqlCommandText = "SELECT * FROM CoursesAndCerts";
                             
                 sqlConnection.Open();
 
