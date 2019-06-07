@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Configuration;
 using System.Data.SqlClient;
 
 namespace PersonalWebsiteDashboard
@@ -8,7 +8,7 @@ namespace PersonalWebsiteDashboard
     {
         #region Members
 
-        private readonly string _databaseConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["WebServiceDataConnectionString"].ConnectionString;
+        private static readonly string _databaseConnectionString = "Data Source=184.168.47.21;Initial Catalog=WebServiceData;Persist Security Info=True;User ID=AGibson;Password=JG|=?:LWq=zyW@M|Z^Zs.G#5iPHM!~#,";//ConfigurationManager.ConnectionStrings["WebServiceDataConnectionString"].ConnectionString != null ? "" : "";
 
         private string testOutputString = "";
         private const string outputStringValidator = "hello";
@@ -24,7 +24,7 @@ namespace PersonalWebsiteDashboard
         
         public bool TestConnectionString()
         {
-            SqlConnection sqlConnection = new SqlConnection("");
+            SqlConnection sqlConnection = new SqlConnection(_databaseConnectionString);
 
             try
             {
@@ -45,7 +45,7 @@ namespace PersonalWebsiteDashboard
 
         public string GetTestData()
         {
-            SqlConnection sqlConnection = new SqlConnection("");
+            SqlConnection sqlConnection = new SqlConnection(_databaseConnectionString);
 
             try
             {

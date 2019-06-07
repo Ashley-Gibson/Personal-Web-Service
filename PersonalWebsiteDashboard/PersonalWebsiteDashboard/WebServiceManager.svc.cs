@@ -6,13 +6,15 @@ using System.ServiceModel.Web;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
+using System.Configuration;
+
 namespace PersonalWebsiteDashboard
 {
     [ServiceContract(Namespace = "")]
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class WebServiceManager
     {
-        protected static DatabaseManager dbManager;
+        public static DatabaseManager dbManager;
 
         public WebServiceManager()
         {
