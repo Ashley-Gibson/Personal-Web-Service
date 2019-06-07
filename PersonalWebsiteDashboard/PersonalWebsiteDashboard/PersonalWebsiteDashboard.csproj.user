@@ -23,7 +23,7 @@
           <SQLDebugging>False</SQLDebugging>
           <ExternalProgram>
           </ExternalProgram>
-          <StartExternalURL>http://localhost:50456/WebServiceManager.svc/VisualStudioBlog</StartExternalURL>
+          <StartExternalURL>http://localhost:50456/WebServiceManager.svc/GetPersonalDatabaseTestData</StartExternalURL>
           <StartCmdLineArguments>
           </StartCmdLineArguments>
           <StartWorkingDirectory>

@@ -8,7 +8,7 @@ namespace PersonalWebsiteDashboard
     {
         #region Members
 
-        private readonly string _databaseConnectionString = ConfigurationManager.ConnectionStrings["WebServiceDataConnectionString"].ConnectionString;
+        private static readonly string _databaseConnectionString = "Data Source=184.168.47.21;Initial Catalog=WebServiceData;Persist Security Info=True;User ID=AGibson;Password=JG|=?:LWq=zyW@M|Z^Zs.G#5iPHM!~#,";//ConfigurationManager.ConnectionStrings["WebServiceDataConnectionString"].ConnectionString != null ? "" : "";
 
         private string testOutputString = "";
         private const string outputStringValidator = "hello";
@@ -19,7 +19,7 @@ namespace PersonalWebsiteDashboard
 
         public string GetDatabaseConnectionString()
         {
-            return _databaseConnectionString;
+            return "";
         }
         
         public bool TestConnectionString()
@@ -49,7 +49,7 @@ namespace PersonalWebsiteDashboard
 
             try
             {
-                string sqlCommandText = "SELECT * FROM TestTable";
+                string sqlCommandText = "SELECT * FROM CoursesAndCerts";
                             
                 sqlConnection.Open();
 

@@ -4,36 +4,44 @@
 
 <div class="row">
     <div class="col-md-12 dashboardContainer">
-        <div class="col-md-3 widgetContainer widgetOne" id="widgetOne">
-            <iframe class="gaugeWidget"
-                    src="~/widgets/html/GaugeWidget.html"
-                    width="120"
-                    height="60"
-                    scrolling="no"
-                    frameborder="0"></iframe>
+        <div class="col-md-4">
+            <div class="col-md-12 widgetContainer widgetOne" id="widgetOne">
+                <iframe class="gaugeWidget"
+                        src="~/widgets/html/GaugeWidget.html"
+                        width="120"
+                        height="60"
+                        scrolling="no"
+                        frameborder="0"></iframe>
+            </div>
         </div>
 
-        <div class="col-md-1 horizontalSpacer"></div>
-
-        <div class="col-md-3 widgetContainer widgetTwo" id="widgetTwo">
-            <iframe class="nestedCirclesWidget"
-                    src="~/widgets/html/NestedCirclesWidget.html"
-                    width="160"
-                    height="160"
-                    scrolling="no"
-                    frameborder="0"></iframe>
+        <div class="col-md-4">
+            <div class="col-md-12 widgetContainer widgetTwo" id="widgetTwo">
+                <iframe class="nestedCirclesWidget"
+                        src="~/widgets/html/NestedCirclesWidget.html"
+                        width="160"
+                        height="160"
+                        scrolling="no"
+                        frameborder="0"></iframe>
+            </div>
         </div>
 
-        <div class="col-md-1 horizontalSpacer"></div>
-
-        <div class="col-md-3 widgetContainer widgetThree" id="widgetThree">
-            <iframe class="pieChartWidget"
-                    src="~/widgets/html/PieChartWidget.html"
-                    width="180"
-                    height="180"
-                    scrolling="no"
-                    frameborder="0"></iframe>
+        <div class="col-md-4">
+            <div class="col-md-12 widgetContainer widgetThree" id="widgetThree">
+                <iframe class="pieChartWidget"
+                        src="~/widgets/html/PieChartWidget.html"
+                        width="180"
+                        height="180"
+                        scrolling="no"
+                        frameborder="0"></iframe>
+            </div>
         </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 webServicesOutput">
+        WebServicesOutput: @ViewData["WebServicesOutput"]
     </div>
 </div>
 

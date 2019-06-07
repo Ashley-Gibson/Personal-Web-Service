@@ -116,3 +116,10 @@ PersonalWebsiteDashboard/Website/obj/project.assets.json
 PersonalWebsiteDashboard/.vs/PersonalWebsiteDashboard/v16/.suo
 PersonalWebsiteDashboard/.vs/config/applicationhost.config
 PersonalWebsiteDashboard/.vs/PersonalWebsiteDashboard/DesignTimeBuild/.dtbcache
+PersonalWebsiteDashboard/PersonalWebsiteDashboard/bin/System.Security.Cryptography.X509Certificates.dll
+PersonalWebsiteDashboard/PersonalWebsiteDashboard/bin/System.Security.Cryptography.Primitives.dll
+PersonalWebsiteDashboard/PersonalWebsiteDashboard/bin/System.Security.Cryptography.Encoding.dll
+PersonalWebsiteDashboard/PersonalWebsiteDashboard/bin/System.Security.Cryptography.Algorithms.dll
+PersonalWebsiteDashboard/PersonalWebsiteDashboard/bin/System.IO.dll
+PersonalWebsiteDashboard/PersonalWebsiteDashboard/bin/System.Runtime.dll
+PersonalWebsiteDashboard/PersonalWebsiteDashboard/bin/System.Net.Http.dll

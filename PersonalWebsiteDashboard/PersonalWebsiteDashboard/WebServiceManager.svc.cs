@@ -5,21 +5,23 @@ using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Net.Http.Formatting;
-using Newtonsoft.Json.Linq;
-using System.Xml;
-using System.Web;
+
+using System.Configuration;
 
 namespace PersonalWebsiteDashboard
 {
     [ServiceContract(Namespace = "")]
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class WebServiceManager
-    { 
-        #region Members
+    {
+        public static DatabaseManager dbManager;
 
-        private static readonly DatabaseManager dbManager = new DatabaseManager();
-        private static readonly string connectionString = dbManager.GetDatabaseConnectionString();
+        public WebServiceManager()
+        {
+            dbManager = new DatabaseManager();
+        }
+
+        #region Members
 
         public class DataObject
         {
@@ -38,7 +40,7 @@ namespace PersonalWebsiteDashboard
         }
 
         // GET
-        [WebGet(UriTemplate = "/GetBlog")]
+        [WebGet(UriTemplate = "/GetBlog{URL}&{blogName}")]
         public string Blog_GetRequest(string URL, string blogName)
         {
             HttpClient client = new HttpClient
