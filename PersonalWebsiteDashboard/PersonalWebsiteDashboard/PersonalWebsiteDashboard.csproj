@@ -119,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseManager.cs" />
+    <Compile Include="Formatters\DatabaseFormatter.cs" />
     <Compile Include="WebServiceManager.svc.cs">
       <DependentUpon>WebServiceManager.svc</DependentUpon>
     </Compile>

@@ -15,8 +15,8 @@ namespace Website.Controllers
             ViewData["VisualStudioBlogHtml"] = webServiceManager.Blog_GetRequest("https://devblogs.microsoft.com/visualstudio/feed/", "VisualStudio");
             ViewData["GoogleDevsBlogHtml"] = webServiceManager.Blog_GetRequest("http://feeds.feedburner.com/GDBcode", "GoogleDevelopers");
 
-            // Get Database Data
-            ViewData["WebServicesOutput"] = webServiceManager.GetTestData("CoursesAndCerts");
+            // Get Database Courses and Certs Data
+            ViewData["WebServicesOutput"] = webServiceManager.GetPersonalDashboardCoursesData();
 
             return View();
         }

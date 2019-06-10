@@ -21,7 +21,49 @@ namespace PersonalWebsiteDashboard
         {
             return "";
         }
-        
+
+        public string GetPersonalDashboardCoursesData()
+        {
+            SqlConnection sqlConnection = new SqlConnection(_databaseConnectionString);
+
+            try
+            {
+                string sqlCommandText = "SELECT * FROM CoursesAndCerts";
+
+                sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand(sqlCommandText, sqlConnection);
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+                string courseName = "";
+                DateTime expiryDate = DateTime.Now;
+                string courseDescription = "";
+
+                int i = 0;
+
+                while (sqlDataReader.Read())
+                {
+                    courseName = sqlDataReader.GetString(0);
+                    expiryDate = sqlDataReader.GetDateTime(1);
+                    courseDescription = sqlDataReader.GetString(2);
+
+                    outputString += courseName + "," + courseDescription + "," + expiryDate.ToShortDateString();
+
+                    i++;
+                }
+
+                sqlConnection.Close();
+
+                return outputString;
+            }
+            catch (Exception err)
+            {
+                sqlConnection.Close();
+
+                return "SQL Error: " + err.Message;
+            }
+        }
+
         public bool TestConnectionString()
         {
             SqlConnection sqlConnection = new SqlConnection(_databaseConnectionString);

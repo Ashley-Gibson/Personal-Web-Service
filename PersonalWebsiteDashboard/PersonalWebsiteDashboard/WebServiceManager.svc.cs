@@ -14,7 +14,7 @@ namespace PersonalWebsiteDashboard
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class WebServiceManager
     {
-        public static DatabaseManager dbManager;
+        private static DatabaseManager dbManager;
 
         public WebServiceManager()
         {
@@ -33,7 +33,14 @@ namespace PersonalWebsiteDashboard
         #region Methods
 
         // GET
-        [WebGet(UriTemplate = "/GetPersonalDatabaseTestData")]
+        [WebGet(UriTemplate = "/GetPersonalDashboardCoursesData")]
+        public string GetPersonalDashboardCoursesData()
+        {
+            return DatabaseFormatter.FormatCoursesAndCerts(dbManager.GetPersonalDashboardCoursesData());
+        }
+
+        // GET
+        [WebGet(UriTemplate = "/GetTestData")]
         public string GetTestData(string tableName = "CoursesAndCerts")
         {
             return dbManager.GetTestData(tableName);

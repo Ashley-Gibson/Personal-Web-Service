@@ -28,9 +28,19 @@ canvas {
     overflow: hidden;
 }
 
-/* Overriding Bootstrap */
+.webServicesOutput{
+    margin-top:20px !important;
+}
 
+/* Overriding Bootstrap */
 .navbar-brand {
-    float:left !important;
-    text-align:center !important;
+    float: left !important;
+    text-align: center !important;
+}
+
+.col-md-4:nth-child(1){
+    padding-left:0 !important;
+}
+.col-md-4:nth-child(3) {
+    padding-right: 0 !important;
 }
