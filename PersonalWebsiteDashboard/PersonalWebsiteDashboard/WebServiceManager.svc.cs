@@ -38,7 +38,7 @@ namespace PersonalWebsiteDashboard
         {
             List<string> rawData = dbManager.GetPersonalDashboardCertificationData();
 
-            List<string> noData = new List<string>(){ "No Data."};
+            List<string> noData = new List<string>(){"No Data."};
 
             return (rawData != null && !rawData[0].Contains("SQL Error")) ? DatabaseFormatter.FormatCertificationData(rawData) : noData;
         }

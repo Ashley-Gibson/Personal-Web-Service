@@ -123,3 +123,4 @@ PersonalWebsiteDashboard/PersonalWebsiteDashboard/bin/System.Security.Cryptograp
 PersonalWebsiteDashboard/PersonalWebsiteDashboard/bin/System.IO.dll
 PersonalWebsiteDashboard/PersonalWebsiteDashboard/bin/System.Runtime.dll
 PersonalWebsiteDashboard/PersonalWebsiteDashboard/bin/System.Net.Http.dll
+PersonalWebsiteDashboard/Website/obj/Website.csproj.EntityFrameworkCore.targets

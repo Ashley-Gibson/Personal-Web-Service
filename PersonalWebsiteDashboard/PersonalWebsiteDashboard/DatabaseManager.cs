@@ -38,17 +38,19 @@ namespace PersonalWebsiteDashboard
                 SqlCommand sqlCommand = new SqlCommand(sqlCommandText, sqlConnection);
                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
-                DateTime expiryDate = DateTime.Now;
-                string courseDescription = "";
+                string expiryDate = string.Empty;
+                string courseDescription = string.Empty;
+                string technologies = string.Empty;
 
                 int i = 0;
 
                 while (sqlDataReader.Read())
-                {
-                    expiryDate = sqlDataReader.GetDateTime(1);
+                {                    
+                    expiryDate = sqlDataReader.GetValue(1).GetType() == new DateTime().GetType() ? sqlDataReader.GetDateTime(1).ToShortDateString() : "No expiration date.";
                     courseDescription = sqlDataReader.GetString(2);
+                    technologies = sqlDataReader.GetString(3);
 
-                    certificationData.Add(courseDescription + "," + expiryDate);
+                    certificationData.Add(courseDescription + "|" + expiryDate + "|" + technologies);
 
                     i++;
                 }
@@ -61,6 +63,7 @@ namespace PersonalWebsiteDashboard
             {
                 sqlConnection.Close();
 
+                certificationData = new List<string>();
                 certificationData.Add("SQL Error: " + err.Message);
 
                 return certificationData;
