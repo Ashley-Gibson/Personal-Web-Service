@@ -10,7 +10,7 @@ namespace PersonalWebsiteDashboard
 
         private static readonly string _databaseConnectionString = "Data Source=184.168.47.21;Initial Catalog=WebServiceData;Persist Security Info=True;User ID=AGibson;Password=JG|=?:LWq=zyW@M|Z^Zs.G#5iPHM!~#,";//ConfigurationManager.ConnectionStrings["WebServiceDataConnectionString"].ConnectionString != null ? "" : "";
 
-        private string testOutputString = "";
+        private string outputString = "";
         private const string outputStringValidator = "hello";
 
         #endregion
@@ -43,13 +43,13 @@ namespace PersonalWebsiteDashboard
             }
         }
 
-        public string GetTestData()
+        public string GetTestData(string tableName)
         {
             SqlConnection sqlConnection = new SqlConnection(_databaseConnectionString);
 
             try
             {
-                string sqlCommandText = "SELECT * FROM CoursesAndCerts";
+                string sqlCommandText = "SELECT * FROM " + tableName;
                             
                 sqlConnection.Open();
 
@@ -57,15 +57,15 @@ namespace PersonalWebsiteDashboard
                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
                 int i = 0;
-                while(sqlDataReader.Read())
+                while(i < sqlDataReader.FieldCount - 1)
                 {
-                    testOutputString = testOutputString + sqlDataReader.GetValue(i);
+                    outputString += sqlDataReader.GetValue(i);
                     i++;
                 }
 
                 sqlConnection.Close();
 
-                return testOutputString.Replace(" ", String.Empty);           
+                return outputString.Replace(" ", String.Empty);           
             }
             catch(Exception err)
             {

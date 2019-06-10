@@ -34,9 +34,9 @@ namespace PersonalWebsiteDashboard
 
         // GET
         [WebGet(UriTemplate = "/GetPersonalDatabaseTestData")]
-        public string GetTestData()
+        public string GetTestData(string tableName = "CoursesAndCerts")
         {
-            return dbManager.GetTestData();
+            return dbManager.GetTestData(tableName);
         }
 
         // GET
