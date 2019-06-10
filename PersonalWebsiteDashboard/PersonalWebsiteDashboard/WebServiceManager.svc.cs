@@ -33,15 +33,26 @@ namespace PersonalWebsiteDashboard
         #region Methods
 
         // GET
-        [WebGet(UriTemplate = "/GetPersonalDashboardCoursesData")]
-        public string GetPersonalDashboardCoursesData()
+        [WebGet(UriTemplate = "/GetPersonalDashboardCertificationData")]
+        public List<string> GetPersonalDashboardCertificationData()
         {
-            return DatabaseFormatter.FormatCoursesAndCerts(dbManager.GetPersonalDashboardCoursesData());
+            List<string> rawData = dbManager.GetPersonalDashboardCertificationData();
+
+            List<string> noData = new List<string>(){ "No Data."};
+
+            return (rawData != null && !rawData[0].Contains("SQL Error")) ? DatabaseFormatter.FormatCertificationData(rawData) : noData;
+        }
+
+        // GET
+        [WebGet(UriTemplate = "/GetPersonalDashboardCertificationDataCourseTitles")]
+        public List<string> GetPersonalDashboardCertificationDataCourseTitles()
+        {
+            return dbManager.GetPersonalDashboardCertificationDataCourseTitles();
         }
 
         // GET
         [WebGet(UriTemplate = "/GetTestData")]
-        public string GetTestData(string tableName = "CoursesAndCerts")
+        public string GetTestData(string tableName = "Certifications")
         {
             return dbManager.GetTestData(tableName);
         }

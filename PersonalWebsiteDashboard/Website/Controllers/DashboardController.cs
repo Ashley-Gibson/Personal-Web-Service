@@ -16,7 +16,12 @@ namespace Website.Controllers
             ViewData["GoogleDevsBlogHtml"] = webServiceManager.Blog_GetRequest("http://feeds.feedburner.com/GDBcode", "GoogleDevelopers");
 
             // Get Database Courses and Certs Data
-            ViewData["WebServicesOutput"] = webServiceManager.GetPersonalDashboardCoursesData();
+            ViewData["CertificationOneData"] = webServiceManager.GetPersonalDashboardCertificationData()[0];
+            ViewData["CertificationOneTitle"] = webServiceManager.GetPersonalDashboardCertificationDataCourseTitles()[0];
+            ViewData["CertificationTwoData"] = webServiceManager.GetPersonalDashboardCertificationData()[0];
+            ViewData["CertificationTwoTitle"] = webServiceManager.GetPersonalDashboardCertificationDataCourseTitles()[0];
+            ViewData["CertificationThreeData"] = webServiceManager.GetPersonalDashboardCertificationData()[0];
+            ViewData["CertificationThreeTitle"] = webServiceManager.GetPersonalDashboardCertificationDataCourseTitles()[0];
 
             return View();
         }

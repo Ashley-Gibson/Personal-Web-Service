@@ -5,14 +5,12 @@ namespace PersonalWebsiteDashboard
 {
     public class DatabaseFormatter
     {
-        public static string FormatCoursesAndCerts(string rawData)
+        public static List<string> FormatCertificationData(List<string> rawData)
         {
-            string html = "";
+            List<string> html = new List<string>();                        
 
-            List<string> stringList = rawData.Split(',').ToList();
-
-            html += "<b>Course Name: " + stringList[0] + "</b> <br />Description: " + stringList[1] + " <br />Expiry Date: " + stringList[2];
-
+            html.Add("<b>Description:</b> " + (!string.IsNullOrEmpty(rawData[0].Split(',')[0]) ? rawData[0].Split(',')[1] : "N/A")  + "<br /><b>Expiry Date:</b> " + (!string.IsNullOrEmpty(rawData[0].Split(',')[2]) ? rawData[0].Split(',')[2] : "N/A"));
+            
             return html;
         }    
     }

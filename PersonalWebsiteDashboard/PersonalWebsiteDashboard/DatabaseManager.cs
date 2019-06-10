@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 
@@ -22,20 +23,21 @@ namespace PersonalWebsiteDashboard
             return "";
         }
 
-        public string GetPersonalDashboardCoursesData()
+        public List<string> GetPersonalDashboardCertificationData()
         {
             SqlConnection sqlConnection = new SqlConnection(_databaseConnectionString);
 
+            List<string> certificationData = new List<string>();
+
             try
             {
-                string sqlCommandText = "SELECT * FROM CoursesAndCerts";
+                string sqlCommandText = "SELECT * FROM Certifications";
 
                 sqlConnection.Open();
 
                 SqlCommand sqlCommand = new SqlCommand(sqlCommandText, sqlConnection);
                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
-                string courseName = "";
                 DateTime expiryDate = DateTime.Now;
                 string courseDescription = "";
 
@@ -43,24 +45,59 @@ namespace PersonalWebsiteDashboard
 
                 while (sqlDataReader.Read())
                 {
-                    courseName = sqlDataReader.GetString(0);
                     expiryDate = sqlDataReader.GetDateTime(1);
                     courseDescription = sqlDataReader.GetString(2);
 
-                    outputString += courseName + "," + courseDescription + "," + expiryDate.ToShortDateString();
+                    certificationData.Add(courseDescription + "," + expiryDate);
 
                     i++;
                 }
 
                 sqlConnection.Close();
 
-                return outputString;
+                return certificationData;
             }
             catch (Exception err)
             {
                 sqlConnection.Close();
 
-                return "SQL Error: " + err.Message;
+                certificationData.Add("SQL Error: " + err.Message);
+
+                return certificationData;
+            }
+        }
+
+        public List<string> GetPersonalDashboardCertificationDataCourseTitles()
+        {
+            SqlConnection sqlConnection = new SqlConnection(_databaseConnectionString);
+
+            List<string> certificationTitles = new List<string>();
+
+            try
+            {
+                string sqlCommandText = "SELECT * FROM Certifications";
+
+                sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand(sqlCommandText, sqlConnection);
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    certificationTitles.Add(sqlDataReader.GetString(0));
+                }
+
+                sqlConnection.Close();
+
+                return certificationTitles;
+            }
+            catch (Exception err)
+            {
+                sqlConnection.Close();
+
+                certificationTitles.Add("SQL Error: " + err.Message);
+
+                return certificationTitles;
             }
         }
 

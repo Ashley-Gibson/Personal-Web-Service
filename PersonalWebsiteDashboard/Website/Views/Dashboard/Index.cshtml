@@ -5,6 +5,7 @@
 <div class="row">
     <div class="col-md-12 dashboardContainer">
         <div class="col-md-4">
+            <p class="widgetTitle">Gauge</p>
             <div class="col-md-12 widgetContainer widgetOne" id="widgetOne">
                 <iframe class="gaugeWidget"
                         src="~/widgets/html/GaugeWidget.html"
@@ -16,6 +17,7 @@
         </div>
 
         <div class="col-md-4">
+            <p class="widgetTitle">Nested Circles</p>
             <div class="col-md-12 widgetContainer widgetTwo" id="widgetTwo">
                 <iframe class="nestedCirclesWidget"
                         src="~/widgets/html/NestedCirclesWidget.html"
@@ -27,6 +29,7 @@
         </div>
 
         <div class="col-md-4">
+            <p class="widgetTitle">Pie Chart</p>
             <div class="col-md-12 widgetContainer widgetThree" id="widgetThree">
                 <iframe class="pieChartWidget"
                         src="~/widgets/html/PieChartWidget.html"
@@ -40,8 +43,25 @@
 </div>
 
 <div class="row">
-    <div class="col-md-12 webServicesOutput">
-        @Html.Raw(ViewData["WebServicesOutput"])
+    <div class="col-md-12 dashboardContainer">
+        <div class="col-md-4">
+            <p class="courseTitle">@Html.Raw(ViewData["CertificationOneTitle"])</p>
+            <p class="widgetContainer coursesText">
+                @Html.Raw(ViewData["CertificationOneData"])
+            </p>
+        </div>
+        <div class="col-md-4">
+            <p class="courseTitle">@Html.Raw(ViewData["CertificationTwoTitle"])</p>
+            <p class="widgetContainer coursesText">
+                @Html.Raw(ViewData["CertificationTwoData"])
+            </p>
+        </div>
+        <div class="col-md-4">
+            <p class="courseTitle">@Html.Raw(ViewData["CertificationThreeTitle"])</p>
+            <p class="widgetContainer coursesText">
+                @Html.Raw(ViewData["CertificationThreeData"])
+            </p>
+        </div>
     </div>
 </div>
 

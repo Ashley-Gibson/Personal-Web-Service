@@ -12,6 +12,8 @@
     padding: 0 !important;
     align-items: flex-end;
     transition: 0.5s;
+    background: #141821;
+    z-index:1;
 }
 
 .googleDevsBlog-header {
@@ -23,7 +25,6 @@
     border-right-style:solid;
     border-color: grey;
     display: flex;
-    background: #141821;
 }
 
 .googleDevsBlog-header-close {
