@@ -67,7 +67,14 @@ hr{
 }
 
 .myWebsiteLink {
-    z-index:999;
+    display: table;
+    vertical-align: middle;
+    align-content:center;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+    margin: auto;
+    z-index: 999;
     position: fixed;
     left: 94.5%;
     top: 50%;
@@ -106,7 +113,7 @@ hr{
     margin:0 !important;
     text-wrap: none;
     white-space: nowrap;
-    font-size: 1.7em;
+    font-size: 1.0vw;
     font-weight: bold;
 }
 
