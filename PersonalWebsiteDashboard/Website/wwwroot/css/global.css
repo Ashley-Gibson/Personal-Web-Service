@@ -66,6 +66,50 @@ hr{
     border-width:2px !important;
 }
 
+.myWebsiteLink {
+    z-index:999;
+    position: fixed;
+    left: 94.5%;
+    top: 50%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #384156;
+    width: 9%;
+    height: 4%;
+    color: lightgrey;
+    text-decoration: none;
+    /* Rotate Text 90 degrees */
+    transform: rotate(90deg);
+    /* Legacy vendor prefixes */
+    /* Safari */
+    -webkit-transform: rotate(90deg);
+    /* Firefox */
+    -moz-transform: rotate(90deg);
+    /* IE */
+    -ms-transform: rotate(90deg);
+    /* Opera */
+    -o-transform: rotate(90deg);
+}
+
+.myWebsiteLink:hover {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+.myWebsiteLink a:hover {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+.myWebsiteLink p {
+    text-align:center;
+    margin:0 !important;
+    text-wrap: none;
+    white-space: nowrap;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
 /* Overriding Bootstrap */
 .navbar-brand {
     float: left !important;
