@@ -65,20 +65,6 @@
     </div>
 </div>
 
-<div class="col-md-12 visualStudioBlog">
-    <div class="visualStudioBlog-header">
-        <div class="visualStudioBlog-header-close">
-            <a href="javascript:void(0)" onclick="togglePanel('visualStudioBlog')"><span class="glyphicon glyphiconvisualStudioBlog glyphicon-plus"></span></a>
-        </div>
-        <div class="visualStudioBlog-header-title">
-            Visual Studio Developers Blog
-        </div>
-    </div>
-    <div class="visualStudioBlog-body">
-        @Html.Raw(ViewData["VisualStudioBlogHtml"])
-    </div>
-</div>
-
 <div class="col-md-12 googleDevsBlog">
     <div class="googleDevsBlog-header">
         <div class="googleDevsBlog-header-close">
@@ -90,5 +76,47 @@
     </div>
     <div class="googleDevsBlog-body">
         @Html.Raw(ViewData["GoogleDevsBlogHtml"])
+    </div>
+</div>
+
+<div class="col-md-12 kenticoBlog">
+    <div class="kenticoBlog-header">
+        <div class="kenticoBlog-header-close">
+            <a href="javascript:void(0)" onclick="togglePanel('kenticoBlog')"><span class="glyphicon glyphiconkenticoBlog glyphicon-plus"></span></a>
+        </div>
+        <div class="kenticoBlog-header-title">
+            Kentico Blog
+        </div>
+    </div>
+    <div class="kenticoBlog-body">
+        @Html.Raw(ViewData["KenticoBlogHtml"])
+    </div>
+</div>
+
+<div class="col-md-12 transferWiseProdEngBlog">
+    <div class="transferWiseProdEngBlog-header">
+        <div class="transferWiseProdEngBlog-header-close">
+            <a href="javascript:void(0)" onclick="togglePanel('transferWiseProdEngBlog')"><span class="glyphicon glyphicontransferWiseProdEngBlog glyphicon-plus"></span></a>
+        </div>
+        <div class="transferWiseProdEngBlog-header-title">
+            TransferWise Product Engineering Blog
+        </div>
+    </div>
+    <div class="transferWiseProdEngBlog-body">
+        @Html.Raw(ViewData["TransferWiseProdEngBlogHtml"])
+    </div>
+</div>
+
+<div class="col-md-12 visualStudioBlog">
+    <div class="visualStudioBlog-header">
+        <div class="visualStudioBlog-header-close">
+            <a href="javascript:void(0)" onclick="togglePanel('visualStudioBlog')"><span class="glyphicon glyphiconvisualStudioBlog glyphicon-plus"></span></a>
+        </div>
+        <div class="visualStudioBlog-header-title">
+            Visual Studio Developers Blog
+        </div>
+    </div>
+    <div class="visualStudioBlog-body">
+        @Html.Raw(ViewData["VisualStudioBlogHtml"])
     </div>
 </div>

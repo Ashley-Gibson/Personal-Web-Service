@@ -41,11 +41,13 @@
     font-family: Courier New, Courier, monospace;
 }
 
-
-
 .visualStudioBlog-body {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 35px;
     height: 100%;
+}
+
+.visualStudioBlog-body img {
+    max-width: 100%;
 }

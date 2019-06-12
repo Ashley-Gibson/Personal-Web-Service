@@ -85,10 +85,14 @@ namespace PersonalWebsiteDashboard
             // Determine Blog to Parse
             switch(blogName)
             {
-                case "VisualStudio":
-                    return XMLParser.ParseVisualStudioBlogResponse(response);
                 case "GoogleDevelopers":
                     return XMLParser.ParseGoogleDevsBlogResponse(response);
+                case "Kentico":
+                    return XMLParser.ParseKenticoBlogResponse(response);
+                case "TransferWiseProductEngineers":
+                    return XMLParser.ParseTransferWiseProdEngBlogResponse(response);
+                case "VisualStudio":
+                    return XMLParser.ParseVisualStudioBlogResponse(response);
             }
 
             return null;

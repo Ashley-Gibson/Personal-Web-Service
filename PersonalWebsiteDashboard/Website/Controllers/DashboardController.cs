@@ -13,8 +13,10 @@ namespace Website.Controllers
             WebServiceManager webServiceManager = new WebServiceManager();
 
             // Send Formatted Blog HTML to Frontend
-            ViewData["VisualStudioBlogHtml"] = webServiceManager.Blog_GetRequest("https://devblogs.microsoft.com/visualstudio/feed/", "VisualStudio");
             ViewData["GoogleDevsBlogHtml"] = webServiceManager.Blog_GetRequest("http://feeds.feedburner.com/GDBcode", "GoogleDevelopers");
+            ViewData["KenticoBlogHtml"] = webServiceManager.Blog_GetRequest("https://www.kentico.com/rss?feed=kentico", "Kentico");
+            ViewData["TransferWiseProdEngBlogHtml"] = webServiceManager.Blog_GetRequest("https://tech.transferwise.com/rss/", "TransferWiseProductEngineers");
+            ViewData["VisualStudioBlogHtml"] = webServiceManager.Blog_GetRequest("https://devblogs.microsoft.com/visualstudio/feed/", "VisualStudio");
 
             // Get Database Courses and Certs Data
             List<string> certificationData = webServiceManager.GetPersonalDashboardCertificationData();

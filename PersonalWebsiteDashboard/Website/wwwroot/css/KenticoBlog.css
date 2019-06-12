@@ -1,5 +1,5 @@
-﻿.googleDevsBlog {
-    left: 0%;
+﻿.kenticoBlog {
+    left: 25%;
     top: 96.5%;
     position: fixed;
     display: block;
@@ -16,38 +16,38 @@
     z-index:1;
 }
 
-.googleDevsBlog-header {
+.kenticoBlog-header {
     width: 24.9%;
     height: 30px;
     position: fixed;
     border-width: 3px;
     border-bottom-style: solid;
-    border-right-style:solid;
+    border-right-style: solid;
     border-color: grey;
     display: flex;
 }
 
-.googleDevsBlog-header-close {
+.kenticoBlog-header-close {
     width: 3%;
     text-align: left;
     padding-left: 8px;
     padding-top: 4px;
 }
 
-.googleDevsBlog-header-title {
+.kenticoBlog-header-title {
     width: 100%;
     font-size: 20px;
     text-align: center;
     font-family: Courier New, Courier, monospace;
 }
 
-.googleDevsBlog-body {
+.kenticoBlog-body {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 35px;
     height: 100%;
 }
 
-.googleDevsBlog-body img {
+.kenticoBlog-body img {
     max-width: 100%;
 }
