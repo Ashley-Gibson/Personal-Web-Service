@@ -90,11 +90,13 @@ hr{
     position: fixed;
     left: 94.5%;
     top: 50%;
+    border-style:solid;
+    border-color:darkgrey;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: #384156;
     width: 9%;
-    height: 4%;
+    height: 3.5%;
     color: lightgrey;
     text-decoration: none;
     /* Rotate Text 90 degrees */
