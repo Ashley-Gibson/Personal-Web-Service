@@ -1,0 +1,61 @@
+﻿.dashboardPopup {
+    border-radius:20px;
+    background-color: #141821;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-top:-12.5%;
+    margin-left:-25%;
+    width: 50%;
+    height: 50%;
+    z-index: 9999;
+}
+
+.dashboardPopupButton{
+    color:grey;
+    border:solid 2px darkgrey;
+    background-color:cadetblue;
+    border-radius:20px;
+    position:fixed;
+    left:0%;
+    top:50%;
+    width:10%;
+    height:2.5%;
+    text-align:center;
+}
+
+.dashboardPopup-header {
+    height: 9%;
+    padding: 10px;
+    border-bottom: solid 1px;
+    display: flex !important;
+    flex-direction: row;
+}
+
+.dashboardPopup-titleText {
+    margin: 0 !important;
+    text-align: center !important;
+    width:100%;
+}
+
+.dashboardPopup-closeButton{
+    text-align:left;
+}
+
+.dashboardPopup-parentList{
+    font-weight:bold;
+}
+
+.dashboardPopup-childList{
+    font-weight:normal !important;
+}
+
+/* Boostrap Overrides */
+.modal-header {
+    padding: 10px !important;
+}
+
+.modal-body{
+    height:91% !important;
+}

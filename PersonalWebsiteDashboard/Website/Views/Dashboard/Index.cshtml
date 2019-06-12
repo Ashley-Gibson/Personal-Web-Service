@@ -2,6 +2,53 @@
     ViewData["Title"] = "Dashboard";
 }
 
+<div class="overlay"></div>
+
+
+<div class="dashboardPopup">
+    <div class="dashboardPopup-header">
+        <a class="dashboardPopup-closeButton" href="javascript:void(0)" onclick="toggleDashboardInfoPopup()"><span class="glyphicon glyphicon-remove"></span></a>
+        <p class="dashboardPopup-titleText">Dashboard Documentation</p>
+    </div>
+    <div class="modal-body">
+        <p>This Dashboard is built using the following technologies:</p>
+        <ul class="dashboardPopup-parentList">
+            <li>C# ASP.NET Core 2.1 (MVC)</li>
+            <li>Web Services APIs
+                <ul class="dashboardPopup-childList">
+                    <li>Gets RSS Feed Blogs</li>
+                    <li>Queries my MSSQL Database for Certification data</li>
+                </ul>
+            </li>
+            <li>MSSQL Database
+                <ul class="dashboardPopup-childList">
+                    <li>Certification data</li>
+                </ul>
+            </li>
+            <li>HTML, CSS, JavaScript, Bootstrap</li>
+            <li>P5.js Widgets
+                <ul class="dashboardPopup-childList">
+                    <li>Guage Widget - Value Display</li>
+                    <li>Nested Circles Widget - Value Display</li>
+                    <li>Pie Chart Widget - Value Display</li>
+                </ul>
+            </li>
+            <li>RSS Feed Blogs
+                <ul class="dashboardPopup-childList">
+                    <li>Google Developers Blog</li>
+                    <li>Kentico Blog</li>
+                    <li>TransferWise Product Engineers Blog</li>
+                    <li>Visual Studio Developers Blog</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="dashboardPopupButton">
+    <a href="javascript:void(0)" onclick="toggleDashboardInfoPopup()">Dashboard Info</a>
+</div>
+
 <div class="row">
     <div class="col-md-12 dashboardContainer">
         <div class="col-md-4">
