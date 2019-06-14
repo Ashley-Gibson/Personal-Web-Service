@@ -12,58 +12,13 @@
     z-index: 9999;
 }
 
-.dashboardPopupButton {    
-    border: solid 2px darkgrey;
-    background-color: #384156;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    position: fixed;
-    left: -4%;
-    top: 50%;
-    width: 10%;
-    height: 3.5%;
-    text-align: center;
-    margin: 0 !important;
-    text-wrap: none;
-    white-space: nowrap;
-    font-size: 1.0vw;
-    font-weight: bold;
-
-    /* Rotate Text 90 degrees */
-    transform: rotate(-90deg);
-    /* Legacy vendor prefixes */
-    /* Safari */
-    -webkit-transform: rotate(-90deg);
-    /* Firefox */
-    -moz-transform: rotate(-90deg);
-    /* IE */
-    -ms-transform: rotate(-90deg);
-    /* Opera */
-    -o-transform: rotate(-90deg);
+.dashboardPopup-header {
+    height: 9%;
+    padding: 10px;
+    border-bottom: solid 1px;
+    display: flex !important;
+    flex-direction: row;
 }
-
-.dashboardPopupButton:hover {
-    color: darkgrey;
-    text-decoration: none;
-}
-
-.dashboardPopupButton a:hover {
-    color: darkgrey;
-    text-decoration: none;
-}
-
-.dashboardPopupButton a{
-    color:lightgrey;
-}
-
-
-    .dashboardPopup-header {
-        height: 9%;
-        padding: 10px;
-        border-bottom: solid 1px;
-        display: flex !important;
-        flex-direction: row;
-    }
 
 .dashboardPopup-titleText {
     margin: 0 !important;

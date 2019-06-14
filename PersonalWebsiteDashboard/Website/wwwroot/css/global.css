@@ -82,26 +82,21 @@ hr{
 }
 
 .myWebsiteLink {
-    display: table;
-    vertical-align: middle;
-    align-content:center;
-    text-align:center;
-    align-items:center;
-    justify-content:center;
-    margin: auto;
-    z-index: 999;
-    position: fixed;
-    left: 94.5%;
-    top: 50%;
-    border-style:solid;
-    border-color:darkgrey;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border: solid 2px darkgrey;
     background-color: #384156;
-    width: 9%;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: fixed;
+    left: 94%;
+    top: 50%;
+    width: 10%;
     height: 3.5%;
-    color: lightgrey;
-    text-decoration: none;
+    text-align: center;
+    margin: 0 !important;
+    text-wrap: none;
+    white-space: nowrap;
+    font-size: 1.0vw;
+    font-weight: bold;
     /* Rotate Text 90 degrees */
     transform: rotate(90deg);
     /* Legacy vendor prefixes */
@@ -120,22 +115,149 @@ hr{
     text-decoration: none;
 }
 
-.myWebsiteLink a:hover {
+.myWebsiteLink a p:hover {
     color: darkgrey;
     text-decoration: none;
 }
 
-.myWebsiteLink p {
-    text-align:center;
-    margin:0 !important;
+    .myWebsiteLink a p {
+        color: lightgrey;
+        text-align: center;
+        margin: 0 !important;
+        text-wrap: none;
+        white-space: nowrap;
+        font-size: 1.0vw;
+        font-weight: bold;
+    }
+
+.myWebsiteLink-text {
+    display: block;
+}
+
+.myWebsiteLink-icon {
+    display: none;
+}
+
+.dashboardPopupButton {
+    border: solid 2px darkgrey;
+    background-color: #384156;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: fixed;
+    left: -4%;
+    top: 50%;
+    width: 10%;
+    height: 3.5%;
+    text-align: center;
+    margin: 0 !important;
     text-wrap: none;
     white-space: nowrap;
     font-size: 1.0vw;
     font-weight: bold;
+    /* Rotate Text 90 degrees */
+    transform: rotate(-90deg);
+    /* Legacy vendor prefixes */
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);
+}
+
+.dashboardPopupButton:hover {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+.dashboardPopupButton a p:hover {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+.dashboardPopupButton-text p, .dashboardPopupButton-text a {
+    display: block;
+    color: lightgrey;
+}
+
+.dashboardPopupButton-icon {
+    display: none;
 }
 
 /* Overriding Bootstrap */
 .navbar-brand {
     float: left !important;
     text-align: center !important;
+}
+
+/* Mobile */
+@media screen and (max-width:768px)
+{
+    body{
+        overflow:scroll;
+    }
+
+    .dashboardContainer .col-md-4:nth-child(1) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .dashboardContainer .col-md-4:nth-child(2) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .dashboardContainer .col-md-4:nth-child(3) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Credit Author
+        <div>Icons made by <a href="https://www.flaticon.com/authors/turkkub"
+        title="turkkub">turkkub</a> from <a href="https://www.flaticon.com/" 			    
+        title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    
+        title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
+
+    .myWebsiteLink {        
+        width: 15%;
+        height:6%;
+        left: 90%;
+    }
+
+    .myWebsiteLink-svg svg{
+        stroke: aliceblue;
+        fill:orange;
+    }
+
+    .dashboardPopupButton {
+        stroke: aliceblue;
+        width: 15%;
+        left: -5%;
+        height: 6%;
+    }
+
+    .dashboardPopupButton-svg svg{
+        stroke: aliceblue;
+        fill: orange;        
+    }
+
+    .dashboardPopupButton-icon {
+        display: block;
+        padding-left: 5%;
+    }
+
+    .dashboardPopupButton-text {
+        display: none;
+    }
+
+    .myWebsiteLink-text {
+        display: none;
+    }
+
+    .myWebsiteLink-icon {
+        display: block;
+        padding-right:5%;
+    }
 }
