@@ -22,9 +22,10 @@
     position: fixed;
     border-width: 3px;
     border-bottom-style: solid;
-    border-right-style:solid;
+    border-right-style: solid;
     border-color: grey;
     display: flex;
+    background-color: #141821;
 }
 
 .googleDevsBlog-header-close {
