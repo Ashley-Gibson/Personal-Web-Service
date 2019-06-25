@@ -5,6 +5,8 @@
     <StartupObject></StartupObject>
     <ApplicationIcon />
     <OutputType>Exe</OutputType>
+    <AssemblyName>Dashboard</AssemblyName>
+    <RootNamespace>Dashboard</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

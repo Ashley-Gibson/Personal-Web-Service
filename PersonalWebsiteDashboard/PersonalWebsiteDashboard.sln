@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.28917.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalWebsiteDashboard", "PersonalWebsiteDashboard\PersonalWebsiteDashboard.csproj", "{6254A2FA-985D-498C-832D-260438FD5E0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "Website\Website.csproj", "{3E99A343-3CAC-4EFA-A79F-36CFBD4A668D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dashboard", "Website\Dashboard.csproj", "{3E99A343-3CAC-4EFA-A79F-36CFBD4A668D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
