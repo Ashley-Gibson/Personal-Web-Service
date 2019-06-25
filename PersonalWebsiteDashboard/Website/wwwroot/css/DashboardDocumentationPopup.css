@@ -12,19 +12,6 @@
     z-index: 9999;
 }
 
-.dashboardPopupButton{
-    color:grey;
-    border:solid 2px darkgrey;
-    background-color:cadetblue;
-    border-radius:20px;
-    position:fixed;
-    left:0%;
-    top:50%;
-    width:10%;
-    height:2.5%;
-    text-align:center;
-}
-
 .dashboardPopup-header {
     height: 9%;
     padding: 10px;
